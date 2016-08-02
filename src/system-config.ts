@@ -7,11 +7,37 @@
  **********************************************************************************************/
 /** Map relative paths to URLs. */
 const map: any = {
+  'moment': 'vendor/moment/moment.js',
+  '@angular2-material': 'vendor/@angular2-material',
+  'ng2-charts': 'vendor/ng2-charts',
+  'chartjs': 'vendor/chart.js/dist/Chart.bundle.min.js',
+  'color-name': 'vendor/color-name/index.js',
+  'color-convert': 'vendor/color-convert/index.js',
+  'chartjs-color': 'vendor/chartjs-color/dist/color.js',
+  'chartjs-color-string': 'vendor/chartjs-color-string/color-string.js',
 };
 
 /** User packages configuration. */
 const packages: any = {
+  'moment':{
+    format: 'cjs'
+  },
+  'ng2-charts': { defaultExtension: 'js', main: 'ng2-charts.js' },
+  'chartjs': { defaultExtension: 'js', format: 'cjs' }
 };
+
+// put the names of any of your Material components here
+const materialPkgs:string[] = [
+  'core',
+  'button',
+  'card',
+  'checkbox',
+  'grid-list',
+];
+
+materialPkgs.forEach((pkg) => {
+  packages[`@angular2-material/${pkg}`] = {main: `${pkg}.js`};
+});
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
 /***********************************************************************************************
@@ -34,6 +60,8 @@ const barrels: string[] = [
   // App specific barrels.
   'app',
   'app/shared',
+  'app/test-material',
+  'app/charts-test',
   /** @cli-barrel */
 ];
 

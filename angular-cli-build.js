@@ -15,7 +15,15 @@ module.exports = function(defaults) {
       'es6-shim/es6-shim.js',
       'reflect-metadata/**/*.+(ts|js|js.map)',
       'rxjs/**/*.+(js|js.map)',
-      '@angular/**/*.+(js|js.map)'
+      '@angular/**/*.+(js|js.map)',
+      'moment/moment.js',
+      '@angular2-material/**/*',
+      'color-name/**/*.+(js|js.map)',
+      'color-convert/**/*.+(js|js.map)',
+      'chart.js/dist/Chart.bundle.min.js',
+      'chartjs-color/dist/color.js',
+      'chartjs-color-string/color-string.js',
+      'ng2-charts/**/*.+(js|js.map)',
     ]
   });
 };
